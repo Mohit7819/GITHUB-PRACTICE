@@ -9,6 +9,9 @@ collection = db.submissions
 @app.route('/', methods=['GET'])
 def index():
     return render_template('form.html', error=None)
+@app.route('/todo', methods=['GET'])
+def todo():
+    return render_template('todo.html')
 @app.route('/submit', methods=['POST'])
 def submit():
     name = request.form.get('name')
