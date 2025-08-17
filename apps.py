@@ -9,9 +9,26 @@ collection = db.submissions
 @app.route('/', methods=['GET'])
 def index():
     return render_template('form.html', error=None)
+<<<<<<< HEAD
 @app.route('/todo', methods=['GET'])
 def todo():
     return render_template('todo.html')
+=======
+
+@app.route('/submittodoitem', methods=['POST'])
+def submittodoitem():
+    item_name = request.form.get('itemName')
+    item_description = request.form.get('itemDescription')
+
+    if item_name and item_description:
+        todo_collection.insert_one({
+            'name': item_name,
+            'description': item_description
+        })
+        return jsonify({'status': 'success', 'message': 'To-Do item added'}), 200
+    else:
+        return jsonify({'status': 'error', 'message': 'Missing data'}), 400
+>>>>>>> master_2
 @app.route('/submit', methods=['POST'])
 def submit():
     name = request.form.get('name')
