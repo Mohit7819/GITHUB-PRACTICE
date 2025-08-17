@@ -6,5 +6,11 @@
  {
     "id":2 ,
     "name":"ajay" ,
-    "email":"ajay@gmail.com" }
+    "email":"ajay@gmail.com" 
+ },
+ {
+    "id":3 ,
+    "name":"dev" ,
+    "email":"dev@gmail.com"
+ }
 ]
