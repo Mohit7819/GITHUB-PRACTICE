@@ -6,11 +6,17 @@
 <body>
     <h1>Create a To-Do Item</h1>
     <form action="/submittodoitem" method="post">
+        <label>Item ID:</label><br>
+        <input type="text" name="itemId" required><br><br>
+        <label>Item UUID:</label><br>
+        <input type="text" name="itemUUID" required><br><br>
         <label>Item Name:</label><br>
         <input type="text" name="itemName" required><br><br>
         <label>Item Description:</label><br>
         <textarea name="itemDescription" required></textarea><br><br>
         <button type="submit">Submit</button>
+        <label>Item Hash:</label><br>
+        <input type="text" name="itemHash" required><br><br>
     </form>
 </body>
 </html>
